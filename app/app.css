@@ -1,0 +1,50 @@
+/* app css stylesheet */
+body {
+  background-image: url("./img/marvelBackground.gif");
+}
+.label-nome{
+  font-family: Arial, Helvetica, sans-serif;
+  color: #fff;
+}
+.cor-padrao{
+  color: #fff !important;
+}
+.centralizado{
+  align-content: center;
+  margin-top: 20px;
+}
+.padding{
+  padding: auto;
+}
+.centraliza{
+  margin-left: auto;
+  margin-right: auto;
+}
+.margin-5px{
+  margin-top: 5px;
+}
+.max-width{
+  max-width: 150px;
+}
+.card-criado{
+  position: relative;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  background-color: #fff;
+  background-clip: border-box;
+  border: 1px solid rgba(0, 0, 0, 0.125);
+  border-radius: 0.25rem;
+}
+.p-4-criado{
+  padding: 1.5rem !important;
+}
+.w-65{
+  width: 50% !important;
+}
+.negrito{
+  font-weight: bold;
+}

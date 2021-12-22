@@ -1,0 +1,31 @@
+<section class="center">
+    <fieldset>
+        <div class="centraliza">
+            <p class="cor-padrao h2 text-center mt-5">Personagens</p>
+        </div>
+        <form action="" class="form-group margin-5px">
+            <div class="row">
+                <div class="col-md-3 col-sm-6 col-xs-12 centraliza input-group mb-3 p-4 ">
+                    <input class="form-control rounded" type="text" placeholder="Nome do personagen" ng-model="vm.pesquisa" ng-keyup="vm.inputVazio($event)" ng-change="vm.filtra(vm.pesquisa)">
+                    <div class="input-group-append"> 
+                    </div>
+                </div>
+            </div>
+        </form>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-3 col-sm-6 col-xs-12 centralizado" style="padding: 0% 5% 0% 5%;" ng-repeat="personagens in vm.personagemFiltrado">
+                    <div class="card">
+                        <img class="card-img-top"
+                            src="{{personagens.thumbnail.path}}.{{personagens.thumbnail.extension}}"
+                            alt="Card image cap" width="200" height="200">
+                        <div class="card-body" >
+                            <h5 class="card-title">{{personagens.name}}</h5>
+                            <a href="" class="btn btn-primary" ng-click="vm.navegar(personagens.id)">Ver mais</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </fieldset>
+</section>
