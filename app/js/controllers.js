@@ -21,8 +21,6 @@ function testeSafraController(testeSafraAPIservice, $location) {
     function getPersonagens() {
         testeSafraAPIservice.buscaTudo().then(function (response) {
             vm.listaPersonagens = response.data.data.results;
-            console.log('vm.listaPersonagens', vm.listaPersonagens);
-            console.log('AAA', vm.listaPersonagens[1].description);
             vm.personagemFiltrado = response.data.data.results;
         });
     };

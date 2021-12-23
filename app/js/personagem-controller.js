@@ -16,7 +16,6 @@ function personagemController(testeSafraAPIservice, $routeParams, $location) {
     iniciar();
 
     function iniciar() {
-        console.log('chamou', $routeParams.id);
         var id = $routeParams.id;
         buscarPersonagemEspecifico(id);
         buscaHistoriaEspecifica(19947);
@@ -31,13 +30,11 @@ function personagemController(testeSafraAPIservice, $routeParams, $location) {
     };
 
     function biografia(){
-        console.log('entrou', vm.resultado.urls[1].url); 
         window.open(vm.resultado.urls[1].url);
     }
 
     function buscaHistoriaEspecifica(id){
         testeSafraAPIservice.buscaHistoriaEspecifica(id).then(function(response){
-            console.log('testeeeeeee',response);
         })
     }
     function navegar(){
