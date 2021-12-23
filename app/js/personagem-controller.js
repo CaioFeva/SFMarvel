@@ -1,11 +1,12 @@
 //
 var app = angular.module('SFMarvel');
-app.controller('personagemController', ['testeSafraAPIservice', '$routeParams', personagemController]);
+app.controller('personagemController', ['testeSafraAPIservice', '$routeParams', '$location', personagemController]);
 
-function personagemController(testeSafraAPIservice, $routeParams, ) {
+function personagemController(testeSafraAPIservice, $routeParams, $location) {
     var vm = this;
 
     vm.biografia = biografia;
+    vm.navegar = navegar;
 
     vm.listaPersonagemEspecifico = {};
     vm.foto = {};
@@ -39,5 +40,8 @@ function personagemController(testeSafraAPIservice, $routeParams, ) {
             console.log('testeeeeeee',response);
         })
     }
+    function navegar(){
+        $location.path('personagens/');
+    };
 
 };
