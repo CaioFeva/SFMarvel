@@ -18,15 +18,15 @@ var app = angular.module('SFMarvel');
     };
 
     function buscaTudo() {
-      return $http.get('http://gateway.marvel.com/v1/public/characters', config);
+      return $http.get('https://gateway.marvel.com/v1/public/characters', config);
     }
     
     function buscarPersonagemEspecifico(id) {
-      return $http.get('http://gateway.marvel.com/v1/public/characters/'+id, config);
+      return $http.get('https://gateway.marvel.com/v1/public/characters/'+id, config);
     }
     
     function buscaHistoriaEspecifica(id) {
-      return $http.get(`http://gateway.marvel.com/v1/public/stories/${id}?ts=${config.params.ts}&apikey=${config.params.apikey}&hash=${config.params.hash}`);
+      return $http.get(`https://gateway.marvel.com/v1/public/stories/${id}?ts=${config.params.ts}&apikey=${config.params.apikey}&hash=${config.params.hash}`);
     }
     return ergastAPI;
   };
