@@ -10,8 +10,8 @@ var app = angular.module('SFMarvel');
     };
     const config = {
       params:{
-        apikey:'5a237863b3cc2061003cbbc4fe20dc06', 
-        hash:'bd4b447a65ef5d6b174f87cf9db6d2db', 
+        apikey:'83e1b1a78fecd78414a4485ff472c148', 
+        hash:'269cad143b5fd112a76794c4c593f592', 
         ts: 1
       },
       headers:{Accept: '*/*'}
