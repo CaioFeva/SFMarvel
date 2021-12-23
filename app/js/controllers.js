@@ -21,9 +21,11 @@ function testeSafraController(testeSafraAPIservice, $location) {
     function getPersonagens() {
         testeSafraAPIservice.buscaTudo().then(function (response) {
             vm.listaPersonagens = response.data.data.results;
+            console.log('vm.listaPersonagens', vm.listaPersonagens);
+            console.log('AAA', vm.listaPersonagens[1].description);
             vm.personagemFiltrado = response.data.data.results;
         });
-    }
+    };
 
     function filtra(pesquisa) {
         if(pesquisa !== undefined && pesquisa.length > 0){
@@ -31,8 +33,8 @@ function testeSafraController(testeSafraAPIservice, $location) {
             vm.personagemFiltrado = vm.listaPersonagens.filter(p => {
                 if (p.name.toLowerCase().includes(pesquisa.toLowerCase())) {
                     return p;
-                }
-            })
+                };
+            });
         }
         else{
             vm.personagemFiltrado = vm.listaPersonagens;
@@ -43,8 +45,9 @@ function testeSafraController(testeSafraAPIservice, $location) {
         if (e.target.value === '') {
             getPersonagens();
         }
-    }
+    };
+
     function navegar(id){
-        $location.path('busca-especifico/'+id);
-    }
+        $location.path('personagem/'+id);
+    };
 };

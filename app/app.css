@@ -11,7 +11,7 @@ body {
 }
 .centralizado{
   align-content: center;
-  margin-top: 20px;
+  margin-top: 1.25rem;
 }
 .padding{
   padding: auto;
@@ -21,10 +21,10 @@ body {
   margin-right: auto;
 }
 .margin-5px{
-  margin-top: 5px;
+  margin-top: 0.313rem;
 }
 .max-width{
-  max-width: 150px;
+  max-width: 9.375rem;
 }
 .card-criado{
   position: relative;
@@ -36,14 +36,14 @@ body {
   word-wrap: break-word;
   background-color: #fff;
   background-clip: border-box;
-  border: 1px solid rgba(0, 0, 0, 0.125);
+  border: 0.063rem solid rgba(0, 0, 0, 0.125);
   border-radius: 0.25rem;
 }
 .p-4-criado{
   padding: 1.5rem !important;
 }
 .w-65{
-  width: 50% !important;
+  width: 30% !important;
 }
 .negrito{
   font-weight: bold;

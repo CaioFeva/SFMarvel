@@ -26,8 +26,6 @@ function personagemController(testeSafraAPIservice, $routeParams, ) {
             vm.listaPersonagemEspecifico = response;
             vm.foto = vm.listaPersonagemEspecifico.data.data.results[0].thumbnail;
             vm.resultado = vm.listaPersonagemEspecifico.data.data.results[0];
-            console.log('vm.resultado', vm.resultado);
-            console.log('BBB',vm.listaPersonagemEspecifico);
         });
     };
 
