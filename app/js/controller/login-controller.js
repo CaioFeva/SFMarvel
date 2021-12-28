@@ -17,7 +17,6 @@ function loginController($cookies, loginService, $location) {
         }
         else{
             vm.handleLogin = true;
-            console.log('vm.handleLogin',vm.handleLogin);
         };
 
     };

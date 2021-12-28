@@ -12,7 +12,6 @@ function loginService($http) {
 
 
   function login(user, senha) {
-    console.log('user, senha', user, senha);
     return $http.post(url, { user: user, password: senha });
   };
 
