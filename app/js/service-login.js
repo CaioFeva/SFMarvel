@@ -7,7 +7,7 @@ function loginService($http) {
     login: login
   };
   
-  var url = 'https://sf-marvel.herokuapp.com/#!/login' 
+  var url = 'https://sf-marvel.herokuapp.com/login' 
 
 
   function login(user, senha) {
