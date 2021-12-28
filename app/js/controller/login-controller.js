@@ -4,25 +4,32 @@ app.controller('loginController', ['$cookies', 'loginService', '$location', logi
 
 function loginController($cookies, loginService, $location) {
     var vm = this;
+
     vm.login = login;
 
     iniciar();
 
     function iniciar() {
+        vm.handleLogin = false;
         vm.token = $cookies.get('tokenValidado');
         if (vm.token) {
             $location.path('/personagens');
+        }
+        else{
+            vm.handleLogin = true;
+            console.log('vm.handleLogin',vm.handleLogin);
         };
 
     };
 
     function login(user, senha) {
+        
         loginService.login(user, senha).then(function (response) {
             $cookies.put('tokenValidado', response.data.token);
             vm.token = response.data.token;
-            if (vm.token) {
+            if (vm.token){
                 $location.path('/personagens');
-            };
+            }
         });
     };
 };

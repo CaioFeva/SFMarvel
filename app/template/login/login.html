@@ -8,7 +8,7 @@
                         <div class="forms-inputs mb-4"> <span>Password</span> <input autocomplete="off" type="password" ng-model="vm.senha"></div>
                         <div class="mb-3"> <button type="submit" class="btn-criado btn-danger w-100">Login</button></div>
                     </div>
-                    <div ng-if="!vm.token && myForm.$submitted">
+                    <div ng-if="vm.handleLogin && myForm.$submitted">
                         <p class="error-login"> Usuário ou senha incorretos</p>
                     </div>
                 </div>
