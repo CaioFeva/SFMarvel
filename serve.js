@@ -18,15 +18,15 @@ function verifica(req, res, next){
     if(err) return res.status(401).end();
     req.userId = decoded.userId;
     next();
-  })
-}
+  });
+};
 
 app.get('/cliente', verifica, (req, res) =>{
-  res.json([{id: 1, nome: 'teste'}]);
+  res.json([{id: 1, nome: 'SFMarvel'}]);
 });
 
 app.post('/login', (req, res) =>{
-  if(req.body.user ==='teste' && req.body.password === '123'){
+  if(req.body.user ==='SFMarvel' && req.body.password === '1234'){
     const token = jwt.sign({userId: 1}, SECRET, {expiresIn: 600});
     return res.json({auth: true, token});
   }

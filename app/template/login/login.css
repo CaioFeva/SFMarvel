@@ -23,7 +23,7 @@ body {
 .forms-inputs input {
     height: 3.125rem;
     border: 0.125rem solid #eee;
-    width: 27.5rem;
+    width: 100%;
 }
 
 .forms-inputs input:focus {
