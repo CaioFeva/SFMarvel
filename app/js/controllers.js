@@ -26,26 +26,26 @@ function testeSafraController(testeSafraAPIservice, $location) {
     };
 
     function filtra(pesquisa) {
-        if(pesquisa !== undefined && pesquisa.length > 0){
+        if (pesquisa !== undefined && pesquisa.length > 0) {
             vm.personagemFiltrado = [];
-            vm.personagemFiltrado = vm.listaPersonagens.filter(p => {
+            vm.personagemFiltrado = vm.listaPersonagens.filter(function (p) {
                 if (p.name.toLowerCase().includes(pesquisa.toLowerCase())) {
                     return p;
                 };
             });
         }
-        else{
+        else {
             vm.personagemFiltrado = vm.listaPersonagens;
-        }
+        };
     };
 
     function inputVazio(e) {
         if (e.target.value === '') {
             getPersonagens();
-        }
+        };
     };
 
-    function navegar(id){
-        $location.path('personagem/'+id);
+    function navegar(id) {
+        $location.path('personagem/' + id);
     };
 };

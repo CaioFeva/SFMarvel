@@ -2,6 +2,10 @@ var app = angular.module('SFMarvel');
 app.config(['$routeProvider',router]);
     function router ($routeProvider) {
     $routeProvider
+    .when('/login', {
+        templateUrl: '/template/login/login.html',
+        controller: 'loginController as vm'
+    })
     .when('/personagens', {
         templateUrl: '/template/listagem-geral.html',
         controller: 'testeSafraController as vm'
@@ -12,3 +16,12 @@ app.config(['$routeProvider',router]);
     })
     .otherwise('/personagens');
 };
+
+app.run(['$cookies','$rootScope', '$location', function($cookies,$rootScope, $location) {
+    $rootScope.$on('$routeChangeStart', function(){
+        var tokenValidado = $cookies.get('tokenValidado');
+        if (!tokenValidado) {
+            $location.path('login');
+        }
+    });
+}]);

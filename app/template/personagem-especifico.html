@@ -1,4 +1,5 @@
 <div class="container mt-4 mb-4 p-3 ">
+    <div ng-include="'/components/deslogar/deslogar.html'"></div>
     <div class="fechar">
         <button type="button" class="btn-fechar botao-redondo" ng-click="vm.navegar()" aria-label="Close">X</button>
     </div>
@@ -7,11 +8,8 @@
             <div class=" image d-flex flex-column justify-content-center align-items-center">
                 <img class="img-fluid max-width" style="border-radius: 8px;"
                     src="{{vm.foto.path}}.{{vm.foto.extension}}" />
-                <h2 class="mt-3 negrito">{{vm.resultado.name}}</h2>
-                <div ng-if="vm.resultado.description.length > 0">
-                    <h6 class="negrito text-center margin-5px">Descrição</h6>
-                    <p class="text-center">{{vm.resultado.description}}</p>
-                </div>
+                <h2 class="mt-3 negrito">{{vm.resultado.name | upperCase}}</h2>
+                <div ng-include="'/components/descricao-heroi/descricao-heroi.html'"></div>
                 <div class="row">
                     <div class=" d-flex mt-2">
                         <button class="btn btn-danger margin-total" ng-click="vm.biografia()">Biografia</button>

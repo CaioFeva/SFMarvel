@@ -1,2 +1,2 @@
 'use strict';
-var app = angular.module('SFMarvel', ['ngRoute']);
+var app = angular.module('SFMarvel', ['ngRoute', 'ngCookies']);

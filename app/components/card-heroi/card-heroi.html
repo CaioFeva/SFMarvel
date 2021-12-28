@@ -1,0 +1,16 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-3 col-sm-6 col-xs-12 centralizado" style="padding: 0% 5% 0% 5%;"
+            ng-repeat="personagens in vm.personagemFiltrado">
+            <div class="card">
+                <img class="card-img-top"
+                    src="{{personagens.thumbnail.path}}.{{personagens.thumbnail.extension}}"
+                    alt="Card image cap" width="200" height="200">
+                <div class="card-body">
+                    <h5 class="card-title">{{personagens.name | upperCase }}</h5>
+                    <a href="" class="btn btn-danger" ng-click="vm.navegar(personagens.id)">Ver mais</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

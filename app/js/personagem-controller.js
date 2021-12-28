@@ -11,7 +11,7 @@ function personagemController(testeSafraAPIservice, $routeParams, $location) {
     vm.listaPersonagemEspecifico = {};
     vm.foto = {};
     vm.resultado = [];
-    
+
 
     iniciar();
 
@@ -19,7 +19,7 @@ function personagemController(testeSafraAPIservice, $routeParams, $location) {
         var id = $routeParams.id;
         buscarPersonagemEspecifico(id);
         buscaHistoriaEspecifica(19947);
-    }
+    };
 
     function buscarPersonagemEspecifico(id) {
         testeSafraAPIservice.buscarPersonagemEspecifico(id).then(function (response) {
@@ -29,15 +29,16 @@ function personagemController(testeSafraAPIservice, $routeParams, $location) {
         });
     };
 
-    function biografia(){
+    function biografia() {
         window.open(vm.resultado.urls[1].url);
-    }
+    };
 
-    function buscaHistoriaEspecifica(id){
-        testeSafraAPIservice.buscaHistoriaEspecifica(id).then(function(response){
+    function buscaHistoriaEspecifica(id) {
+        testeSafraAPIservice.buscaHistoriaEspecifica(id).then(function (response) {
         })
-    }
-    function navegar(){
+    };
+
+    function navegar() {
         $location.path('personagens/');
     };
 
